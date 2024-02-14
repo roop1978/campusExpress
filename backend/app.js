@@ -1,6 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const connection = require("./database/connection"); // Adjust the path accordingly
+const cors = require("cors");
+const connection = require("./database/connection");
+const routes = require("./routes/routes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -8,8 +10,17 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(bodyParser.json());
 
+// Dynamic CORS configuration
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow all origins
+    callback(null, true);
+  },
+};
+
+app.use(cors(corsOptions));
+
 // Routes
-const routes = require("./routes/routes");
 app.use("/api", routes);
 
 // Start server

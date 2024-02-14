@@ -30,7 +30,9 @@ const createUser = async (req, res) => {
 
     res.status(201).json(savedUser);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res
+      .status(500)
+      .json({ message: "Failed to create user", error: error.message });
   }
 };
 

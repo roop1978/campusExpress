@@ -6,12 +6,8 @@ const userSchema = mongoose.Schema(
 
     name: { type: String },
     phoneNo: { type: Number },
-    regNo: { type: Number },
-    branch: { type: String },
-    learnerid: { type: String },
-    upiID: { type: String },
-    txnID: { type: String },
-    screenshot: { type: String },
+    collegeName: { type: String },
+    
   },
   { timestamps: true }
 );
