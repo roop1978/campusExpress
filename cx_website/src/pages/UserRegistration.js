@@ -6,12 +6,7 @@ function UserRegistration() {
     email: "",
     name: "",
     phoneNo: "",
-    regNo: "",
-    branch: "",
-    learnerid: "",
-    upiID: "",
-    txnID: "",
-    screenshot: "",
+    collegeName: "",
   });
 
   const handleUserSubmit = async (e) => {
@@ -69,54 +64,15 @@ function UserRegistration() {
           value={userData.phoneNo}
           onChange={handleChange}
         />
-        <label htmlFor="regNo">Registration Number:</label>
+        <label htmlFor="phoneNo">College Name:</label>
         <input
           type="text"
-          id="regNo"
-          name="regNo"
-          value={userData.regNo}
+          id="collegeName"
+          name="collegeName"
+          value={userData.collegeName}
           onChange={handleChange}
         />
-        <label htmlFor="branch">Branch:</label>
-        <input
-          type="text"
-          id="branch"
-          name="branch"
-          value={userData.branch}
-          onChange={handleChange}
-        />
-        <label htmlFor="learnerid">Learner ID:</label>
-        <input
-          type="text"
-          id="learnerid"
-          name="learnerid"
-          value={userData.learnerid}
-          onChange={handleChange}
-        />
-        <label htmlFor="upiID">UPI ID:</label>
-        <input
-          type="text"
-          id="upiID"
-          name="upiID"
-          value={userData.upiID}
-          onChange={handleChange}
-        />
-        <label htmlFor="txnID">Transaction ID:</label>
-        <input
-          type="text"
-          id="txnID"
-          name="txnID"
-          value={userData.txnID}
-          onChange={handleChange}
-        />
-        <label htmlFor="screenshot">Screenshot:</label>
-        <input
-          type="text"
-          id="screenshot"
-          name="screenshot"
-          value={userData.screenshot}
-          onChange={handleChange}
-        />
+
         <button type="submit">Register</button>
       </form>
     </div>
